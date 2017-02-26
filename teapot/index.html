@@ -88,7 +88,7 @@
             void main() {
 
                 float depthCenter = texture2D( depthTexture, vUv ).r;
-                float px = 1.0/800.0;
+                float px = 1.0 / 2000.0;    // 相邻取样点间隔
 
                 vec3 leftpos = vec3( vUv.s - px, vUv.t, 1.0 - texture2D( depthTexture, vec2( vUv.s - px, vUv.t ) ).r );
                 vec3 rightpos = vec3( vUv.s + px, vUv.t, 1.0 - texture2D( depthTexture, vec2( vUv.s + px, vUv.t ) ).r );
